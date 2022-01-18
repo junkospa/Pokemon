@@ -15,20 +15,21 @@ Install a local server such as tomcat: https://tomcat.apache.org/download-90.cgi
 Place the WAR file (Poke.war) in the webapps/ROOT folder in the tomcat installtion folder
 
 Start up the tomcat server.
-Mac: Go to the tomcat installtion folder (such as apache-tomcat-9.0.56)and execute below commands
-sudo chmod +x bin/*.sh
-bin/startup.sh
-
+* Mac: Go to the tomcat installtion folder (such as apache-tomcat-9.0.56)and execute below commands
+```
+> sudo chmod +x bin/*.sh
+> bin/startup.sh
+```
 Go to the browser and go to the below URL with a pokemon name at the end. This example is calling "ditto"
 Example: http://localhost:8080/Poke/pokemon/ditto
 
 This will return JSON format like this:
-
+```
 {
 "name": "ditto",
 "description": "Capable of copying an foe's genetic code to instantly transform itself into a duplicate of the foe.",
 }
-
+```
 ### Dependencies
 * Using Java libraries:
 * javax.servlet-api-4.0.1.jar
