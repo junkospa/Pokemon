@@ -2,8 +2,8 @@
 Let's get your favourite Pokemon's description Shalesparean translation.
 
 ## Description
-API to retrieve Pokemon description from Pokemon name. Written in Java and tested with tomcat local server.
-Using below APIs:
+This API is to retrieve Pokemon description from Pokemon name. Written in Java and tested with tomcat local server.
+Using below APIs to retrieve information:
 * Poke API: https://pokeapi.co/
 * Shakespeare translation API: https://funtranslations.com/shakespeare
 
@@ -12,7 +12,7 @@ Using below APIs:
 Install a local server such as tomcat: https://tomcat.apache.org/download-90.cgi
 (For example, Tomcat 9)
 
-Place the WAR file (Poke.war) in the webapps/ROOT folder in the tomcat installtion folder
+Place the WAR file (Poke.war) in the webapps folder in the tomcat installtion folder
 
 Start up the tomcat server.
 * Mac: Go to the tomcat installtion folder (such as apache-tomcat-9.0.56)and execute below commands
@@ -20,10 +20,11 @@ Start up the tomcat server.
 > sudo chmod +x bin/*.sh
 > bin/startup.sh
 ```
-Go to the browser and go to the below URL with a pokemon name at the end. This example is calling "ditto"
-Example: http://localhost:8080/Poke/pokemon/ditto
+Go to the browser and go to the base URL with a pokemon name at the end. This example is calling "ditto"
+* Base URL:  http://localhost:8080/Poke/pokemon/
+* Example: http://localhost:8080/Poke/pokemon/ditto
 
-This will return JSON format like this:
+The call will return results in JSON format like this:
 ```
 {
 "name": "ditto",
@@ -41,9 +42,9 @@ This will return JSON format like this:
 * commons-logging-1.2.jar
 
 
-### Executing program
+### Executing Test class
 Includes test main class (TestMain.java)
-Using this class, individual method can be tested (have to edit the code to make the method public)
+Using this class, individual methods can be tested (have to edit the code to make the method public)
 * String getDescription(String pokename)
 * String getTranslation(String description)
 
